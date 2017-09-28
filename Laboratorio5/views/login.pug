@@ -1,0 +1,28 @@
+extends layout
+
+block content
+	.navbar
+
+	.container
+		.clearfix
+			form(action='/recuperardatos' method='post')
+				.clearfix
+					.form-inline
+						.col-xs-12.form-group
+							.input-group.col-sm-11.col-sm-offset-1
+								.input-group-addon
+									span.glyphicon.glyphicon-user
+								input.form-control(name='usuario', id='name', type='text', placeholder='Usuario', required='required')
+				br
+				.clearfix
+					.form-inline
+						.col-xs-12.form-group
+							.input-group.col-sm-11.col-sm-offset-1
+								.input-group-addon
+									span.glyphicon.glyphicon-lock
+								input.form-control(name='pass' type='password', placeholder='Contraseña', required='required')
+				br
+				.clearfix
+					.text-center
+						button.btn.btn-default.submit(type='submit' value='Enviar' href='/users') Iniciar Sesion
+				br
