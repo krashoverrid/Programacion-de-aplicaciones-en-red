@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/encriptado', (req, res) => {
-  res.render('encriptado.pug', {
+  res.render('index.pug', {
     pageTitle: 'Programacion de aplicaciones en redes',
     title: 'Acerca de Node.js',
     text1: encrypt(texto1),
