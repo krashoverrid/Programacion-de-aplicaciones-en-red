@@ -1,0 +1,37 @@
+extends layout
+
+block content
+	.wrapper
+		.contianer
+			.row
+				.col-sm-12
+					h4.page-title Faculta #{data.facultad}
+
+			.row
+				.col-sm-12
+					.card-box.table-responsive
+						h4.m-t-0.header-title Pregunta 1
+						br
+						br
+
+						table#datatable.table.table-striped.table-bordered
+							thead
+								tr
+									th Nombre
+									th Apellido
+									th Codigo
+									th Ciclo
+									th Trica
+									th Cursos
+							tbody
+								each val in data.alumnos
+									if val.ciclo == '7'
+										tr
+											th= val.nombre
+											th= val.apellido
+											th= val.codigo
+											th= val.ciclo
+											th= val.trica
+											th= val.cursos
+
+

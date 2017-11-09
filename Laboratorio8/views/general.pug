@@ -1,0 +1,36 @@
+extends layout
+
+block content
+	.wrapper
+		.contianer
+			each facu in data
+				.row
+					.col-sm-12
+						h4.page-title Faculta #{facu.facultad}
+
+				.row
+					.col-sm-12
+						.card-box.table-responsive
+							h4.m-t-0.header-title Alumnos
+							br
+							br
+
+							table#datatable.table.table-striped.table-bordered
+								thead
+									tr
+										th Nombre
+										th Apellido
+										th Codigo
+										th Ciclo
+										th Trica
+										th Cursos
+								tbody
+									each val in facu.alumnos
+										if val
+											tr
+												th= val.nombre
+												th= val.apellido
+												th= val.codigo
+												th= val.ciclo
+												th= val.trica
+												th= val.cursos
