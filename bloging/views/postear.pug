@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+	section.premix-single-album-details.section-padding
+		.container
+			.row
+				form(method='POST', enctype="multipart/form-data", action='/postear')
+					.col-md-6.col-sm-6
+						.premix-border-single-page-img
+							input(type='file', name='image', id='image')
+							img(src='#', alt='', id='img_destino')
+					.col-md-6.col-sm-6
+						.premix-contact-us-area
+							//form(method='POST' action='/postear')
+							input(type='text', name='title', placeholder='Title *')
+							input(type='text', name='idUser', value = login)
+							//input(type='text',name='image', value = 'img/s-album-img.png')
+							textarea(type='text', rows = 10, name='resumen', placeholder='Text *')
+							input(type='submit', value = 'POST')
+
+	

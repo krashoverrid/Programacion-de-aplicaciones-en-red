@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	section.premix-my-account-section.section-padding
+		.container
+			.premix-section-heading.text-center
+			.row.content-margin-top
+				.col-md-6.col-md-offset-3
+					.premix-contact-us-area
+						h4 register
+						form(method='POST' action='/register')
+							input(type='text', name='id', placeholder='EMAIL: *')
+							input(type='password', name='password', placeholder='PASSWORD: *')
+							input(type='submit', value='register', name='register')

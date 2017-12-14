@@ -1,0 +1,31 @@
+extends layout
+
+block content
+
+	
+	// Premix Latest News Section Start
+	section.premix-latest-news-section.section-padding
+		.container
+			.premix-section-heading.text-right
+				h2(data-titles='POST') POST
+			// .premix-section-heading End
+			.row.content-margin-top
+				each val in psts
+					.col-md-4.col-sm-6
+						.premix-single-latest-news
+							.premix-latest-news-header
+								h4 #{val.title}
+								ul
+									li.premix-profile
+										a(href='#') #{val.idUser}
+							// .premix-latest-news-header END
+							.premix-news-img
+								img(src= val.image, alt='')
+								p #{val.fecha}
+							// .premix-news-img END
+							.premix-news-footer
+								p
+									| #{val.resumen}
+								.text-center
+									a.premix-btn.readmore-btn(href='#') READ MORE
+	p #{success}

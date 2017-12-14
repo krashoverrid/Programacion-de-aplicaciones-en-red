@@ -1,0 +1,104 @@
+doctype html
+head
+	// Meta Tags
+	meta(charset='utf-8')
+	meta(http-equiv='x-ua-compatible', content='ie=edge')
+	meta(name='viewport', content='width=device-width, initial-scale=1')
+	meta(name='author', content='')
+	meta(name='description', content='')
+	meta(name='keywords', content='')
+	// Page Title
+	title Blogging Krash
+	// Favicon and Apple Touch Icon
+	link(rel='icon', href='/images/favicon.png')
+	link(rel='apple-touch-icon', href='/images/apple-touch-icon.html')
+	// Google Fonts
+	link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i', rel='stylesheet')
+	// Stylesheets
+	link(rel='stylesheet', href='/stylesheets/plugins.css')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+	link(rel='stylesheet', href='/stylesheets/custom.css')
+	// Modernizr
+	script(src='/javascripts/vendor/modernizr-2.8.3.min.js')
+body.home
+
+	#preloaders
+		.premix-table
+			.premix-table-cell
+				.bar-c
+					#bar-1.bar
+					#bar-2.bar
+					#bar-3.bar
+					#bar-4.bar
+					#bar-5.bar
+					#bar-6.bar
+					#bar-7.bar
+	// Premix Body Start
+	// Premix Header Start
+	#main_menu_fixed
+	header.premix-main-menu-area
+		.container
+			.row
+				.col-md-2.col-sm-3.col-xs-6
+					.logo
+						a(href='/')
+							img(src='images/logo.png', alt='')
+					// .logo End
+				.col-md-10.col-sm-9.col-xs-6.premix-menu-section
+					.premix-menu
+						ul
+							li
+								a(href='/')
+									| HOME 
+							if login
+								li
+									a(href='/postear')
+										| postear 
+							else
+								li
+									a(href='/login')
+										| Login 
+							if login
+								li
+									a(href= '/logout')
+										| Log out
+							else
+								li
+									a(href='/register')
+										| Register 
+					// .premix-menu End
+					.premix-menu.premix-mobile-menu
+						ul.slimmenu
+							li
+								a(href='/')
+									| HOME 
+							li
+								a(href='/login')
+									| Login 
+							li
+								a(href='/register')
+									| Register 
+					// .premix-menu End
+		progress#premix-progressBar.premix-single(value='0')
+			.premix-progress-container
+				span.premix-progress-bar
+	// Premix Welcome Section Start
+	br
+	br
+
+	block content
+
+
+
+	// Scripts
+	script(src='/javascripts/vendor/jquery-3.2.0.min.js')
+	script(src='/javascripts/plugins.js')
+	script(src='/javascripts/main.js')
+	script(src='/javascripts/image.js')
+	script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', integrity='sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh', crossorigin='anonymous')
+	script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js', integrity='sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ', crossorigin='anonymous')
+
+
+
+

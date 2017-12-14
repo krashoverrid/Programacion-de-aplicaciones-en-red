@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	section.premix-my-account-section.section-padding
+		.container
+			.premix-section-heading.text-center
+			.row.content-margin-top
+				.col-md-6.col-md-offset-3
+					.premix-contact-us-area
+						h4 LOG IN
+						//form(action='POST', method='POST')
+						if errors
+							each val in errors
+								.alert.alert-danger
+									|  #{val.msg}
+
+						form(method='POST' action='/admin')
+							input(type='text', name='name', placeholder='USERNAME OR EMAIL: *')
+							input(type='password', name='password', placeholder='PASSWORD: *')
+							input(type='submit')
+
